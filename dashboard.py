@@ -5,10 +5,18 @@ import streamlit as st
 # Header
 st.header('Nabila :sparkles:')
 st.subheader('Plot')
- 
+
+nama = st.text_input('Nama', 'Nabila', label_visibility='collapsed')
+st.write('Halo ', nama)
+
+f1 = st.number_input('f1= ', value=1)
+f2 = st.number_input('f2= ', value=1)
+st.write('Frekuensi plot sinus adalah ', f1)
+st.write('Frekuensi plot cosinus adalah ', f2)
+
 x = np.linspace(-2 * np.pi, 2 * np.pi, 1000)  # Generating x values from -2*pi to 2*pi
-y = np.sin(x)  # Calculating sin(x) values
-z = np.cos(x)  # Calculating sin(x) values
+y = np.sin(f1*x)  # Calculating sin(x) values
+z = np.cos(f2*x)  # Calculating sin(x) values
  
 fig, ax = plt.subplots(figsize=(16, 8))
 ax.plot(x, y, label='sin(x)', color='b')  # Plotting sin(x) curve
@@ -18,7 +26,7 @@ ax.set_xlabel("x")
 ax.tick_params(axis='y', labelsize=20)
 ax.set_xticklabels(ax.get_xticklabels(), rotation=30, ha='right')
 ax.tick_params(axis='x', labelsize=15)
- 
+
 st.pyplot(fig)
  
 # subheader
@@ -29,7 +37,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.caption('Sin')
     x = np.linspace(-2 * np.pi, 2 * np.pi, 1000)  # Generating x values from -2*pi to 2*pi
-    y = np.sin(x)  # Calculating sin(x) values
+    y = np.sin(f1*x)  # Calculating sin(x) values
  
     fig, ax = plt.subplots(figsize=(16, 8))
     ax.plot(x, y, label='sin(x)', color='b')  # Plotting sin(x) curve
@@ -38,13 +46,13 @@ with col1:
     ax.tick_params(axis='y', labelsize=20)
     ax.set_xticklabels(ax.get_xticklabels(), rotation=30, ha='right')
     ax.tick_params(axis='x', labelsize=15)
- 
+
     st.pyplot(fig)
  
 with col2:
     st.caption('Cos')
     x = np.linspace(-2 * np.pi, 2 * np.pi, 1000)  # Generating x values from -2*pi to 2*pi
-    y = np.cos(x)  # Calculating sin(x) values
+    y = np.cos(f2*x)  # Calculating sin(x) values
  
     fig, ax = plt.subplots(figsize=(16, 8))
     ax.plot(x, y, label='cos(x)', color='g')  # Plotting cos(x) curve
@@ -56,4 +64,4 @@ with col2:
  
     st.pyplot(fig)  
  
-st.caption('Copyright © Nugroho Adi Pramono 2023')
+st.caption('source: Nugroho Adi Pramono nugroho.xyz')
