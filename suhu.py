@@ -7,7 +7,7 @@ st.header('Nabila :sparkles:')
 st.subheader('Plot')
 
 
-x = st.number_input('suhu ',value=100)
+x = st.number_input('suhu ',value x =100)
 satuan = st.selectbox(
     'satuan',
     ('C','F','R','K'))
