@@ -7,7 +7,7 @@ st.header('Nabila :sparkles:')
 st.subheader('Plot')
 
 option = st.selectbox(
-    'satuan?',
+    'satuan',
     ('C', 'F', 'R','K'))
     
 f1 = st.number_input('f1= ', value=1)
