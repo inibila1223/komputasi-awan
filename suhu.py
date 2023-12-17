@@ -6,7 +6,6 @@ import streamlit as st
 st.header('Nabila :sparkles:')
 st.subheader('Plot')
 
-st.write('Halo ', nama)
 option = st.selectbox(
     'satuan?',
     ('C', 'F', 'R','K'))
