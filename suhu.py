@@ -9,11 +9,11 @@ st.subheader('Plot')
 c1,c2 = st.columns(2)
 
 with c1:
-    x = st.number_input('suhu',value=100)
+ x = st.number_input('suhu',value=100)
 with c2:
-    satuan = st.selectbox(
-    'satuan',
-    ('C','F','R','K'))
+ satuan = st.selectbox(
+  'satuan',
+  ('C','F','R','K'))
     
 
 
