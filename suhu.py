@@ -1,9 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
- 
-# Header
-st.header('Nabila :sparkles:')
+
+#Header
+st.header('Anan Maulana :sparkles:')
 st.subheader('Plot')
 
 c1, c2 =st.columns(2)
@@ -55,6 +55,8 @@ if(satuan=='K'):
     y = (x - 273) * 4/5
   elif(konversi=='K'):
     y = x
-    
 
+st.write(x , ' ' , satuan, '=' , y, ' ' , konversi)
+
+   
 st.caption('source: Nabila.xyz')
